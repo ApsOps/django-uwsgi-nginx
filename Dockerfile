@@ -48,5 +48,7 @@ run pip install -r /home/docker/code/app/requirements.txt
 # be installed in the code/app/ directory
 run django-admin.py startproject website /home/docker/code/app/ 
 
+VOLUME ["/home/docker/code/app"]
+
 expose 80
 cmd ["supervisord", "-n"]
